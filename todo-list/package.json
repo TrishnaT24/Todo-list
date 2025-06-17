@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.10",
+    "axios": "^1.10.0",
     "daisyui": "^5.0.43",
     "iconoir-react": "^7.11.0",
     "react": "^19.1.0",
