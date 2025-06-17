@@ -1,14 +1,14 @@
 import React,{useState} from 'react'
 import Cards from './Cards'
 import Cart from './Cart'
-function Shop({handleCart}) {
+function Shop({handleChange}) {
   return (
     <div>
-    <Cards title="shoe" hi={handleCart}></Cards>
-    <Cards title="bag" hi={handleCart}></Cards>
-    <Cards title="slippers" hi={handleCart} ></Cards>
-    <Cards title="nike" hi={handleCart}></Cards>
-    <Cards title="food" hi={handleCart} ></Cards>
+    <Cards title="shoe" hi={handleChange}></Cards>
+    <Cards title="bag" hi={handleChange}></Cards>
+    <Cards title="slippers" hi={handleChange} ></Cards>
+    <Cards title="nike" hi={handleChange}></Cards>
+    <Cards title="food" hi={handleChange} ></Cards>
     </div>
   )
 }

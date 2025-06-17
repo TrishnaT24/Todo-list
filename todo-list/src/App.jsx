@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Todo from './Todo'
 import Menu from './Menu'
 import Cards from './Cards'
@@ -9,24 +9,34 @@ function App() {
   const [cart,setCart]=useState([]);
 
     const handleCart=(val)=>{
-    setCart([...cart,val]);
+      setCart([...cart,val]);
+    }
+
+    useEffect(() => {
     console.log(cart);
-  }
+  }, [cart]); // <- add empty brackets here
+
   return (
     <div>
-      {/* <Todo></Todo> */}
-      {/* <Menu></Menu> */}
-      {/* <Shop></Shop> */}
-      {/* <button>Cart</button> */}
       <Router>
         <div>
           <Link to="/cart">
           <button>Cart</button>
           </Link>
+          <Link to="/todo">
+          <button>TODO LIST</button>
+          </Link>
+          <Link to="/menu">
+          <button>DROP DOWN LIST</button>
+          </Link>
+                    
+
         </div>
         <Routes>
         <Route path="/" element={<Shop handleChange={handleCart}/>}/>
   <Route path="/cart" element={<Cart items={cart} />} />
+  <Route path='/todo' element={<Todo/>}/>
+  <Route path='/menu' element={<Menu/>}/>
         </Routes>
       </Router>
     </div>

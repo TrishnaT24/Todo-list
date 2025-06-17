@@ -1,7 +1,7 @@
 import React from 'react'
-function Cards({title,handleCart}) {
+function Cards({title,hi}) {
     const handleChange=()=>{
-        handleCart(title);
+        hi(title);
     }
   return (
     <div className="card bg-base-100 w-96 shadow-sm">
